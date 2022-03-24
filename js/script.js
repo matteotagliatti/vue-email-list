@@ -17,7 +17,6 @@ const app = new Vue({
       }
 
       this.emails = tempEmails;
-      console.log(this.emails);
     },
   },
   created() {
