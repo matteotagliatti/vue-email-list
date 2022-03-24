@@ -7,16 +7,12 @@ const app = new Vue({
   },
   methods: {
     getEmails() {
-      const tempEmails = [];
-
       for (let i = 0; i < this.numberOfEmails; i++) {
-        axios.get(this.apiurl).then(function (answer) {
+        axios.get(this.apiurl).then((answer) => {
           const email = answer.data.response;
-          tempEmails.push(email);
+          this.emails.push(email);
         });
       }
-
-      this.emails = tempEmails;
     },
   },
   created() {
